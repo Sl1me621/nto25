@@ -177,7 +177,7 @@ def process_video(video_path):
                 cv2.rectangle(display_frame, (x1, y1), (x2, y2), (0,255,0), 2)
                 cv2.putText(display_frame, f"{obj.get('class', 'unknown')} {track_id}",(x1, y1-10),  cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2) 
 
-        cv2.imshow('Frame', frame)
+        cv2.imshow('Frame', display_frame)
         if cv2.waitKey(1) == 27: break
     print("\nИтоговая статистика объектов:")
     print("----------------------------")
